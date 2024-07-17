@@ -3,4 +3,5 @@
 
 int16 dummy1 = 0;
 int LED_state = 0;
+unsigned long counter = 0;
 

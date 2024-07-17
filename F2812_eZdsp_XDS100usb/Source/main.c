@@ -65,13 +65,19 @@ void main(void)
 // Step 6. IDLE loop. Just sit and loop forever (optional):
     for(;;)
     {
-        GpioDataRegs.GPBTOGGLE.bit.GPIOB3=0x1;
+//        int32 i,j;
+//        for ( i = 0;  i < 0xFFFF; ++ i) {
+//            for ( j = 0;  j < 0xF; ++ j) {
+//            };
+//        };
 
-        int32 i,j;
-        for ( i = 0;  i < 0xFFFF; ++ i) {
-            for ( j = 0;  j < 0xF; ++ j) {
-            };
-        };
+        if ( counter == 30000000 ){
+            GpioDataRegs.GPBTOGGLE.bit.GPIOB3=0x1;
+            counter = 0;
+        }
+
+        counter++;
+
     }
 
 }
