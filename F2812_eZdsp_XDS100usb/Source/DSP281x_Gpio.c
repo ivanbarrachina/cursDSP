@@ -39,7 +39,14 @@ void InitGpio(void)
      GpioMuxRegs.GPBMUX.bit.PWM10_GPIOB3 = 0; // I/O
      GpioMuxRegs.GPBDIR.bit.GPIOB3 = 1; // 1 = output
      ///////////////////////////////
-
+     // LAB 1: Knight rider (pins B2, E0 i E1)
+     GpioMuxRegs.GPBMUX.bit.PWM9_GPIOB2 = 0; // I/O
+     GpioMuxRegs.GPBDIR.bit.GPIOB2 = 1; // 1 = output
+     GpioMuxRegs.GPEMUX.bit.XINT1_XBIO_GPIOE0 = 0; // I/O
+     GpioMuxRegs.GPEDIR.bit.GPIOE0 = 1; // 1 = output
+     GpioMuxRegs.GPEMUX.bit.XINT2_ADCSOC_GPIOE1 = 0; // I/O
+     GpioMuxRegs.GPEDIR.bit.GPIOE1 = 1; // 1 = output
+     ///////////////////////////////
 
      GpioMuxRegs.GPFMUX.all=0x0000;
      GpioMuxRegs.GPFDIR.bit.GPIOF14=1;        // 1=output, aixo es del Javi (?)

@@ -70,9 +70,14 @@ void main(void)
 //            for ( j = 0;  j < 0xF; ++ j) {
 //            };
 //        };
-
-        if ( counter == 30000000 ){
+        if ( counter == 7500000 ) {
             GpioDataRegs.GPBTOGGLE.bit.GPIOB3=0x1;
+        } else if ( counter == 15000000 ) {
+            GpioDataRegs.GPBTOGGLE.bit.GPIOB2=0x1;
+        } else if ( counter == 22500000 ) {
+            GpioDataRegs.GPETOGGLE.bit.GPIOE1=0x1;
+        } else if ( counter == 30000000 ) {
+            GpioDataRegs.GPETOGGLE.bit.GPIOE0=0x1;
             counter = 0;
         }
 
